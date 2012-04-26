@@ -24,7 +24,7 @@ DEALINGS IN THE SOFTWARE.
 **Android and iOS Requests Best Practices Sample Code**
 ========================
 
-This sample code is a complement to the [Android and iOS: Discovery via Requests Best Practices](https://developers.facebook.com/blog/post/2012/04/23/android-and-ios--discovery-via-invites-and-requests-best-practices/) blog post.
+This sample code is a complement to the [Android and iOS: Discovery via Requests Best Practices](https://developers.facebook.com/blog/post/2012/04/26/android-and-ios--discovery-via-requests-best-practices/) blog post.
 
 This README will walk you through the following:
 
