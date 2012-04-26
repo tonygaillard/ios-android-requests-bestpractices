@@ -1,0 +1,149 @@
+**License**
+========================
+
+Copyright 2012 Facebook, Inc.
+
+You are hereby granted a non-exclusive, worldwide, royalty-free license to
+use, copy, modify, and distribute this software in source code or binary
+form for use in connection with the web services and APIs provided by
+Facebook.
+
+As with any software that integrates with the Facebook platform, your use
+of this software is subject to the [Facebook Developer Principles and
+Policies](http://developers.facebook.com/policy/). This copyright notice
+shall be included in all copies or substantial portions of the software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+DEALINGS IN THE SOFTWARE.
+
+**Android and iOS Requests Best Practices Sample Code**
+========================
+
+This sample code is a complement to the [Android and iOS: Discovery via Requests Best Practices](https://developers.facebook.com/blog/post/2012/04/23/android-and-ios--discovery-via-invites-and-requests-best-practices/) blog post.
+
+This README will walk you through the following:
+
+* Getting Started
+* Creating your Facebook app
+* Installing the iOS app
+* Installing the Android app
+
+**Getting Started**
+===================
+
+Your install package should have the following files:
+
+* Requests iOS Project (iOS)
+
+* MyRequests Project (Android)
+
+
+To get the sample code do the following:
+
+* Install [Git](http://git-scm.com/).
+
+* Pull the samples package from GitHub:
+
+    git clone git://github.com/fbsamples/native-requests-best-practices
+
+**Creating your Facebook app**
+==============================
+
+First set up a Facebook app using the Developer app:
+
+* Create a new [Facebook app](https://developers.facebook.com/apps)
+* (Optional) Enter the `App Namespace` when creating your app. You can choose a simple string to identify your app, such as ''requests'', but it must be unique.
+* Enter an _App Domain_ setting that corresponds to your domain.
+* Enter a _Mobile Web URL_. For testing purposes set it to a URL in your domain. 
+* Configure the Native iOS App settings
+  * Enter a _iOS Bundle ID_. This should be of the form com.example.samples.requests where example corresponds to your domain. You should note this bundle ID because it needs to match the _Bundle identifier_ in the Xcode project.
+  * Enter a value for the _iPhone App Store ID_. The value must correspond to any valid iTunes app ID.
+  * Enter "0" in the _iPad App Store ID_ setting. 
+  * Enable the _Configured for iOS SSO_ setting.
+* Configure the Native Android App settings.
+  * Enable the _Configured for Android SSO_ setting.
+  * Enter you app's signature in the _Android Key Hash_ field. For more information see the [Android Tutorial](https://developers.facebook.com/docs/mobile/android/build/#sig).
+  * Enter "com.facebook.samples.requests" in the _Android Package Name_ setting.
+  * Enter "com.facebook.samples.requests.App" in the _Android Class Name_ setting.
+  * Enter a value for the _Android Market URI_. The value must correspond to any valid Google Play URL.
+
+**Installing the iOS app**
+==========================
+
+1. Get the latest Facebook iOS SDK from GitHub: git clone git://github.com/facebook/facebook-ios-sdk.git
+
+1. Using Xcode open up Requests/Requests.xcodeproj
+
+1. Include the Facebook iOS SDK:
+   1. The Facebook iOS SDK package should include a folder, facebook-ios-sdk/src
+   1. Drag the src folder to the Requests project. You may choose to copy the items over into your project.
+
+1. Set up your App ID:
+   1. Open up AppDelegate.m, add your app ID by changing:
+
+             static NSString *kAppId = @"264966473580049";
+
+     to:
+
+             static NSString *kAppId = @"YOUR_APP_ID";
+
+   1. Open up Requests/Supporting Files/Requests-Info.plist
+   1. Navigate to URL types > Item 0 > URL Schemes > Item 0
+   1. Replace fbYOUR_APP_ID with "fb" followed by your app ID, e.g. fb123456 if your app ID is 123456
+
+1. Set up your Bundle Identifier:
+   1. Open up Requests/Supporting Files/Requests-Info.plist
+   1. Edit the Bundle identifier information and make sure it matches the settings in the Facebook Dev App
+
+1. Build and run the application. If you have any issues check out the [iOS Tutorial](https://developers.facebook.com/docs/mobile/ios/build/).
+
+**Installing the Android app**
+==========================
+
+1. Get the latest Facebook Android SDK from GitHub: git clone git://github.com/facebook/facebook-android-sdk.git
+
+1. Launch Eclipse
+
+1. Create a Facebook Android SDK Project:
+   1. From the Eclipse menu, navigate to File > New > Android Project
+   1. Select "Create project from existing source"
+   1. The Facebook Android SDK package should include a folder, facebook-android-sdk/facebook 
+   1. Browse to the facebook folder and select it
+   1. Click Next
+   1. Select Android 2.2 as the Build Target
+   1. Click Finish
+
+1. Import the sample app:
+   1. From the Eclipse menu, navigate to File > Import
+   1. Select General > Existing Projects into Workspace
+   1. The sample package should include a folder, Android/MyRequests
+   1. Browse to the MyRequest folder and select it
+   1. Click Finish
+
+1. Include the Facebook Android SDK:
+   1. From the Eclipse Package Explorer, select the MyRquests project
+   1. Right-click and select the Properties menu
+   1. In the Library section, click Add
+   1. Select com_facebook_android
+   1. Click OK
+   1. Click OK to exit the Properties dialog
+
+1. Set up your App ID:
+   1. From the Eclipse Package Explorer, select the MyRequests project
+   1. Open up App.java (under the src/com.facebook.samples.requests folder)
+   1. Change the existing app ID
+
+           public static final String APP_ID = "264966473580049";
+
+   to:
+
+           public static final String APP_ID = "YOUR_APP_ID";
+
+1. Install the Facebook app. Go to the [Android Tutorial](https://developers.facebook.com/docs/mobile/android/build/#install) to find more instructions on this.
+
+1. Run the application as an Android Application. If you have any issues check out the [Android Tutorial](https://developers.facebook.com/docs/mobile/android/build/). 
