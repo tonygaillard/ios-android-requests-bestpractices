@@ -136,13 +136,13 @@ First set up a Facebook app using the Developer app:
 1. Set up your App ID:
    1. From the Eclipse Package Explorer, select the MyRequests project
    1. Open up App.java (under the src/com.facebook.samples.requests folder)
-   1. Change the existing app ID
+   1. Change the existing app ID:
 
-           public static final String APP_ID = "264966473580049";
+             public static final String APP_ID = "264966473580049";
 
-   to:
+     to:
 
-           public static final String APP_ID = "YOUR_APP_ID";
+             public static final String APP_ID = "YOUR_APP_ID";
 
 1. Install the Facebook app. Go to the [Android Tutorial](https://developers.facebook.com/docs/mobile/android/build/#install) to find more instructions on this.
 
