@@ -1,40 +1,19 @@
-**License**
-========================
+# Requests Best Practcies (for iOS and Android)
 
-Copyright 2012 Facebook, Inc.
+Guides you through the best practices for sending Facebook Requests on Android and iOS.
 
-You are hereby granted a non-exclusive, worldwide, royalty-free license to
-use, copy, modify, and distribute this software in source code or binary
-form for use in connection with the web services and APIs provided by
-Facebook.
+Authors: Christine Abernathy (caabernathy)
 
-As with any software that integrates with the Facebook platform, your use
-of this software is subject to the [Facebook Developer Principles and
-Policies](http://developers.facebook.com/policy/). This copyright notice
-shall be included in all copies or substantial portions of the software.
+## Installing
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
-THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-DEALINGS IN THE SOFTWARE.
-
-**Android and iOS Requests Best Practices Sample Code**
-========================
-
-This sample code is a complement to the [Android and iOS: Discovery via Requests Best Practices](https://developers.facebook.com/blog/post/2012/04/26/android-and-ios--discovery-via-requests-best-practices/) blog post.
-
-This README will walk you through the following:
+This section will walk you through the following:
 
 * Getting Started
 * Creating your Facebook app
 * Installing the iOS app
 * Installing the Android app
 
-**Getting Started**
-===================
+### Getting Started
 
 Your install package should have the following files:
 
@@ -51,19 +30,18 @@ To get the sample code do the following:
 
     git clone git://github.com/fbsamples/native-requests-best-practices
 
-**Creating your Facebook app**
-==============================
+### Creating your Facebook app
 
 First set up a Facebook app using the Developer app:
 
 * Create a new [Facebook app](https://developers.facebook.com/apps)
 * (Optional) Enter the `App Namespace` when creating your app. You can choose a simple string to identify your app, such as ''requests'', but it must be unique.
 * Enter an _App Domain_ setting that corresponds to your domain.
-* Enter a _Mobile Web URL_. For testing purposes set it to a URL in your domain. 
+* Enter a _Mobile Web URL_. For testing purposes set it to a URL in your domain.
 * Configure the Native iOS App settings
   * Enter a _iOS Bundle ID_. This should be of the form com.example.samples.requests where example corresponds to your domain. You should note this bundle ID because it needs to match the _Bundle identifier_ in the Xcode project.
   * Enter a value for the _iPhone App Store ID_. The value must correspond to any valid iTunes app ID.
-  * Enter "0" in the _iPad App Store ID_ setting. 
+  * Enter "0" in the _iPad App Store ID_ setting.
   * Enable the _Configured for iOS SSO_ setting.
 * Configure the Native Android App settings.
   * Enable the _Configured for Android SSO_ setting.
@@ -72,8 +50,7 @@ First set up a Facebook app using the Developer app:
   * Enter "com.facebook.samples.requests.App" in the _Android Class Name_ setting.
   * Enter a value for the _Android Market URI_. The value must correspond to any valid Google Play URL.
 
-**Installing the iOS app**
-==========================
+### Installing the iOS app
 
 1. Get the latest Facebook iOS SDK from GitHub: git clone git://github.com/facebook/facebook-ios-sdk.git
 
@@ -102,8 +79,7 @@ First set up a Facebook app using the Developer app:
 
 1. Build and run the application. If you have any issues check out the [iOS Tutorial](https://developers.facebook.com/docs/mobile/ios/build/).
 
-**Installing the Android app**
-==========================
+### Installing the Android app
 
 1. Get the latest Facebook Android SDK from GitHub: git clone git://github.com/facebook/facebook-android-sdk.git
 
@@ -112,7 +88,7 @@ First set up a Facebook app using the Developer app:
 1. Create a Facebook Android SDK Project:
    1. From the Eclipse menu, navigate to File > New > Android Project
    1. Select "Create project from existing source"
-   1. The Facebook Android SDK package should include a folder, facebook-android-sdk/facebook 
+   1. The Facebook Android SDK package should include a folder, facebook-android-sdk/facebook
    1. Browse to the facebook folder and select it
    1. Click Next
    1. Select Android 2.2 as the Build Target
@@ -146,4 +122,19 @@ First set up a Facebook app using the Developer app:
 
 1. Install the Facebook app. Go to the [Android Tutorial](https://developers.facebook.com/docs/mobile/android/build/#install) to find more instructions on this.
 
-1. Run the application as an Android Application. If you have any issues check out the [Android Tutorial](https://developers.facebook.com/docs/mobile/android/build/). 
+1. Run the application as an Android Application. If you have any issues check out the [Android Tutorial](https://developers.facebook.com/docs/mobile/android/build/).
+
+
+## Contributing
+
+All contributors must agree to and sign the [Facebook CLA](https://developers.facebook.com/opensource/cla) prior to submitting Pull Requests. We cannot accept Pull Requests until this document is signed and submitted.
+
+## License
+
+Copyright 2012-present Facebook, Inc.
+
+You are hereby granted a non-exclusive, worldwide, royalty-free license to use, copy, modify, and distribute this software in source code or binary form for use in connection with the web services and APIs provided by Facebook.
+
+As with any software that integrates with the Facebook platform, your use of this software is subject to the Facebook Developer Principles and Policies [http://developers.facebook.com/policy/]. This copyright notice shall be included in all copies or substantial portions of the software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
