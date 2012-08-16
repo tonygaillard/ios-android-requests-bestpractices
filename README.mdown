@@ -1,4 +1,4 @@
-# Requests Best Practcies (for iOS and Android)
+# Requests Best Practices (for iOS and Android)
 
 Guides you through the best practices for sending Facebook Requests on Android and iOS.
 
